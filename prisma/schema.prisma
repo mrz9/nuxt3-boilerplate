@@ -1,0 +1,14 @@
+datasource db {
+    provider = "mysql"
+    url      = env("DATABASE_URL")
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+// 管理员 表
+model User {
+    id   Int    @id @default(autoincrement())
+    name String
+}

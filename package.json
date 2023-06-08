@@ -1,0 +1,53 @@
+{
+    "name": "vite-ssr-boilerplate",
+    "private": true,
+    "version": "0.0.0",
+    "scripts": {
+        "dev": "cross-env APP_MODE=dev vite --config vite.config.server.js",
+        "dev:pre": "cross-env APP_MODE=pre vite --config vite.config.server.js",
+        "dev:pub": "cross-env APP_MODE=pub vite --config vite.config.server.js",
+        "build:dev": "cross-env APP_MODE=dev node build/index",
+        "build:pre": "cross-env APP_MODE=pre node build/index",
+        "build:pub": "cross-env APP_MODE=pub node build/index"
+    },
+    "dependencies": {
+        "ohash": "^0.1.0",
+        "@nuxt/devalue": "^2.0.0",
+        "@prisma/client": "^3.11.1",
+        "@vueuse/head": "^0.7.5",
+        "body-parser": "^1.19.2",
+        "compression": "^1.7.4",
+        "cookie-session": "^2.0.0",
+        "cross-env": "^7.0.3",
+        "dotenv": "^16.0.0",
+        "express": "^4.17.3",
+        "express-winston": "^4.2.0",
+        "serve-static": "^1.15.0",
+        "vue": "^3.2.25",
+        "vue-router": "^4.0.14",
+        "winston": "^3.6.0",
+        "prisma": "^3.11.1",
+        "vite": "^2.8.0",
+        "winston-daily-rotate-file": "^4.6.1"
+    },
+    "devDependencies": {
+        "@types/compression": "^1.7.2",
+        "@types/cookie-session": "^2.0.44",
+        "@types/express": "^4.17.13",
+        "@types/node": "^17.0.23",
+        "@typescript-eslint/eslint-plugin": "^5.9.1",
+        "@typescript-eslint/parser": "^5.9.1",
+        "@vitejs/plugin-vue": "^2.2.0",
+        "eslint": "^8.6.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-vue": "^8.2.0",
+        "prettier": "^2.5.1",
+        "typescript": "^4.5.4",
+        "vue-eslint-parser": "^8.3.0",
+        "vue-tsc": "^0.29.8"
+    },
+    "prisma": {
+        "schema": "./prisma/schema.prisma"
+    }
+}
